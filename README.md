@@ -2,6 +2,18 @@
 
 A statically-typed, expression-oriented programming language with immutable-by-default semantics.
 
+## DISCLAIMER:
+THIS IS THE ONLY TEXT I WROTE MYSELF, ALL THE CODE AND TEXT IS WRITTEN BY CLAUDE WITH MY INPUT. I KNOW BASICALLY NOTHING ABOUT GO, AND NOTHING ABOUT IMPLEMENTING PROGRAMMING LANGUAGES. I HAD WRITTEN NO ACTUAL CODE IN THIS LANGUAGE, BECAUSE I DIDNT YET HAVE A TIME.
+USE AT YOUR OWN RISK
+
+## WTF:
+I was bored at work and started wondering if Claude could actually create and implement a programming language.
+Turns out, yeah. We did that. In like an hour.
+I'm an Android developer who mostly writes Kotlin and Java. I've read some Ruby, Python, Clojure—enough to know what I like and what pisses me off. So I just started complaining to Claude about languages. "Why does everything have null?" "Why is mutation hidden?" "Why do errors suck at telling you what went wrong?" And we started fixing it. Just messing around at first. Then it turned into a whole thing.
+Now we have MoonShot. No null values—you use Option[T] instead. Mutation is a type wrapper Mutable[T] so you can see exactly what can change. Errors automatically give you the method name, the input data, and what broke. It chains Result types so if anything fails, it stops and tells you exactly where. It's actually kind of genius.
+We designed the whole spec together, then I threw it at Claude Code. An hour later, boom—working interpreter. In Go, which I still can't write. The whole thing is on GitHub: https://github.com/m-o/MoonShot
+The goal was fast like Go, safe like Kotlin, nice to use like Ruby. We actually pulled it off. A bored Android dev and an AI just built a programming language in an afternoon. What a time to be alive.
+
 ## Building
 
 Requires Go 1.21 or later.
@@ -16,19 +28,6 @@ go build -o moonshot .
 # Evaluate an expression directly
 ./moonshot -e 'println("Hello, World!")'
 ```
-
-## DISCLAIMER:
-THIS IS THE ONLY TEXT I WROTE MYSELF, ALL THE CODE AND TEXT IS WRITTEN BY CLAUDE WITH MY INPUT. I KNOW BASICALLY NOTHING ABOUT GO, AND NOTHING ABOUT IMPLEMENTING PROGRAMMING LANGUAGES. I HAD WRITTEN NO ACTUAL CODE IN THIS LANGUAGE, BECAUSE I DIDNT YET HAVE A TIME.
-USE AT YOUR OWN RISK
-
-## WTF:
-I was bored at work and started wondering if Claude could actually create and implement a programming language.
-Turns out, yeah. We did that. In like an hour.
-I'm an Android developer who mostly writes Kotlin and Java. I've read some Ruby, Python, Clojure—enough to know what I like and what pisses me off. So I just started complaining to Claude about languages. "Why does everything have null?" "Why is mutation hidden?" "Why do errors suck at telling you what went wrong?" And we started fixing it. Just messing around at first. Then it turned into a whole thing.
-Now we have MoonShot. No null values—you use Option[T] instead. Mutation is a type wrapper Mutable[T] so you can see exactly what can change. Errors automatically give you the method name, the input data, and what broke. It chains Result types so if anything fails, it stops and tells you exactly where. It's actually kind of genius.
-We designed the whole spec together, then I threw it at Claude Code. An hour later, boom—working interpreter. In Go, which I still can't write. The whole thing is on GitHub: https://github.com/m-o/MoonShot
-The goal was fast like Go, safe like Kotlin, nice to use like Ruby. We actually pulled it off. A bored Android dev and an AI just built a programming language in an afternoon. What a time to be alive.
-
 
 ## Language Features
 
