@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(go build:*)",
+      "Bash(./moonshot:*)",
+      "Bash(for f in examples/*.moon)",
+      "Bash(do echo \"=== $f ===\")",
+      "Bash(done)"
+    ]
+  }
+}
